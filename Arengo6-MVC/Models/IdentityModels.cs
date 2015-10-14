@@ -29,5 +29,11 @@ namespace Arengo6_MVC.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<Arengo6_MVC.Models.Service> Services { get; set; }
+
+        public System.Data.Entity.DbSet<Arengo6_MVC.Models.Career> Careers { get; set; }
+
+        public System.Data.Entity.DbSet<Arengo6_MVC.Models.Project> Projects { get; set; }
     }
 }

@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Arengo6_MVC.Models.Service>
+
+@{
+    ViewBag.Title = "Service Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Back to Admin", "Index") @Html.ActionLink("Create New", "ServiceCreate")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ServiceName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ServiceParent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ServiceOrder)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServiceName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServiceParent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServiceOrder)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "ServiceEdit", new { id = item.ID }) |
+                @Html.ActionLink("Details", "ServiceDetails", new { id = item.ID }) |
+                @Html.ActionLink("Delete", "ServiceDelete", new { id = item.ID })
+            </td>
+        </tr>
+    }
+
+</table>

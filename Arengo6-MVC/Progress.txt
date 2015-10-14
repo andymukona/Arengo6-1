@@ -1,0 +1,16 @@
+﻿TODO
+
+	Admin screen	*
+	Careers			*
+	Projects		-
+	Services		*
+
+
+13-10-2015
+
+	New application created
+	Entity Framework capability added
+
+14-10-2015
+
+	TODAY!
