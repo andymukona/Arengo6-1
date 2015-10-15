@@ -1,0 +1,50 @@
+﻿@model Arengo6_MVC.Models.Career
+
+@{
+    ViewBag.Title = "CareerDetails";
+}
+
+<h2>CareerDetails</h2>
+
+<div>
+    <h4>Career</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.JobTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateRequired)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateRequired)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tags)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tags)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "CareerEdit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "CareerIndex")
+</p>

@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Arengo6_MVC.Models.Career>
+
+@{
+    ViewBag.Title = "Career Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Back to Admin", "Index") @Html.ActionLink("Create New", "CareerCreate")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.JobTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateRequired)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.JobTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateRequired)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "CareerEdit", new { id = item.ID }) |
+                @Html.ActionLink("Details", "CareerDetails", new { id = item.ID }) |
+                @Html.ActionLink("Delete", "CareerDelete", new { id = item.ID })
+            </td>
+        </tr>
+    }
+
+</table>
